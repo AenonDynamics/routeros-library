@@ -8,6 +8,13 @@
 /ip service set api-ssl disabled=yes
 /ip service set www-ssl disabled=yes
 
+# disable (mostly) unused NAT helpers
+/ip firewall service-port set h323 disabled=yes
+/ip firewall service-port set irc disabled=yes
+/ip firewall service-port set tftp disabled=yes
+/ip firewall service-port set pptp disabled=yes
+/ip firewall service-port set udplite disabled=yes
+
 # strong ssh params; disable forwarding; key based login only (if available)
 /ip ssh set allow-none-crypto=no strong-crypto=yes forwarding-enabled=no always-allow-password-login=no
 
