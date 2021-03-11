@@ -73,7 +73,33 @@ add name="5ghz-40mhz-chan132" comment="wlan 5GHz channel 132" \
     frequency=$wlanChannel132
 
 # automatic, 40MHz
-add name="5ghz-40mhz-auto" comment="wlan 5GHz automatic channel selection 36-44-52-60-100-108" \
+add name="5ghz-40mhz-auto" comment="wlan 5GHz automatic channel selection 36-44-52-60-100-108-116-124-132" \
     band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ce \
     reselect-interval=30m save-selected=yes \
-    frequency="$wlanChannel36,$wlanChannel44,$wlanChannel52,$wlanChannel60,$wlanChannel100,$wlanChannel108"
+    frequency="$wlanChannel36,$wlanChannel44,$wlanChannel52,$wlanChannel60,$wlanChannel100,$wlanChannel108,$wlanChannel116,$wlanChannel124,$wlanChannel132"
+
+# capsman channel config 5ghz - 80MHz
+# -------------------------------------------
+
+# non overlapping 5ghz channels, 80MHz
+add name="5ghz-80mhz-chan36" comment="wlan 5GHz channel 36" \
+    band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ceee \
+    frequency=$wlanChannel36
+
+add name="5ghz-40mhz-chan52" comment="wlan 5GHz channel 52" \
+    band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ceee \
+    frequency=$wlanChannel52
+
+add name="5ghz-40mhz-chan100" comment="wlan 5GHz channel 100" \
+    band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ceee \
+    frequency=$wlanChannel100
+
+add name="5ghz-40mhz-chan116" comment="wlan 5GHz channel 108" \
+    band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ceee \
+    frequency=$wlanChannel116
+
+# automatic, 80MHz
+add name="5ghz-80mhz-auto" comment="wlan 5GHz automatic channel selection 36-52-100-116" \
+    band=5ghz-n/ac control-channel-width=20mhz extension-channel=Ceee \
+    reselect-interval=30m save-selected=yes \
+    frequency="$wlanChannel36,$wlanChannel52,$wlanChannel100,$wlanChannel116"
