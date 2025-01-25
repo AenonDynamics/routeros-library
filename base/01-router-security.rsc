@@ -16,7 +16,7 @@
 /ip/firewall/service-port set sip disabled=yes
 
 # strong ssh params; disable forwarding; key based login only (if available)
-/ip/ssh set allow-none-crypto=no strong-crypto=yes forwarding-enabled=no always-allow-password-login=no
+/ip/ssh set strong-crypto=yes forwarding-enabled=no always-allow-password-login=no
 
 # disable mac-telnet services
 /tool/mac-server set allowed-interface-list=none
