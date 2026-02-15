@@ -9,3 +9,6 @@
 
 # clock settings timezone CET
 /system/clock set time-zone-name=CET
+
+# enable ntp server
+/system/ntp/server set enabled=yes
