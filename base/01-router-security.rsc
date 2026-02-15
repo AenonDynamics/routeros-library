@@ -33,9 +33,6 @@
 # disable bandwidth test server
 /tool/bandwidth-server set enabled=no
 
-# disable dns cache (dns resolved external)
-/ip/dns set allow-remote-requests=no
-
 # enable syn cookies
 /ip/settings set tcp-syncookies=yes
 
